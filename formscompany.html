@@ -1,0 +1,315 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Vulturfly</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet"/>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-white flex items-center justify-center min-h-screen">
+    <!-- Navbar -->
+  <nav class="bg-[#28282B] shadow-md fixed w-full top-0 z-50 fade-in">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+     <a class="text-2xl font-bold text-white fade-in" href="./index.html#home">
+      <img alt="Vulturfly logo" class="h-12" height="150" src="./images/Logo.png" width="60"/>
+     </a>
+     <ul class="flex space-x-6 fade-in">
+      <li>
+       <a class="text-white hover:text-gray-400 pulse scroll-to" href="./index.html#home">
+        Home
+       </a>
+      </li>
+     </ul>
+    </div>
+   </nav>
+<!-- Forms -->
+<div class="bg-[#28282B] rounded-lg shadow-lg p-8 max-w-2xl w-full mt-20">
+    <h1 class="text-3xl font-semibold text-center text-white mb-2">
+     Create My Company
+    </h1>
+    <p class="text-center text-gray-400 mb-8">
+     Through the following form, we will collect the information needed to create your company.
+    </p>
+    <h2 class="text-xl font-semibold text-white mb-4">
+     1. Your Information
+    </h2>
+    <form>
+     <div class="mb-4">
+      <label class="block text-gray-400 mb-2" for="first-names">
+       First Names
+      </label>
+      <input class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500" id="first-names" placeholder="Enter your first names" type="text"/>
+     </div>
+     <div class="mb-4">
+      <label class="block text-gray-400 mb-2" for="last-names">
+       Last Names
+      </label>
+      <input class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500" id="last-names" placeholder="Enter your last names" type="text"/>
+     </div>
+     <div class="mb-4">
+      <label class="block text-gray-400 mb-2" for="email">
+       Email Address
+      </label>
+      <input class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500" id="email" placeholder="Enter your email address" type="email"/>
+     </div>
+     <div class="mb-4">
+      <label class="block text-gray-400 mb-2" for="phone">
+       Phone Number
+      </label>
+      <div class="flex">
+       <select class="flex items-center px-4 py-2 border rounded-l-lg bg-gray-100 focus:outline-none focus:ring-2 focus:ring-teal-500" id="country-code">
+                        <option value="+93">+93 (Afghanistan)</option>
+                        <option value="+355">+355 (Albania)</option>
+                        <option value="+213">+213 (Algeria)</option>
+                        <option value="+376">+376 (Andorra)</option>
+                        <option value="+244">+244 (Angola)</option>
+                        <option value="+1-268">+1-268 (Antigua and Barbuda)</option>
+                        <option value="+54">+54 (Argentina)</option>
+                        <option value="+374">+374 (Armenia)</option>
+                        <option value="+61">+61 (Australia)</option>
+                        <option value="+43">+43 (Austria)</option>
+                        <option value="+994">+994 (Azerbaijan)</option>
+                        <option value="+1-242">+1-242 (Bahamas)</option>
+                        <option value="+973">+973 (Bahrain)</option>
+                        <option value="+880">+880 (Bangladesh)</option>
+                        <option value="+1-246">+1-246 (Barbados)</option>
+                        <option value="+375">+375 (Belarus)</option>
+                        <option value="+32">+32 (Belgium)</option>
+                        <option value="+501">+501 (Belize)</option>
+                        <option value="+229">+229 (Benin)</option>
+                        <option value="+975">+975 (Bhutan)</option>
+                        <option value="+591">+591 (Bolivia)</option>
+                        <option value="+387">+387 (Bosnia and Herzegovina)</option>
+                        <option value="+267">+267 (Botswana)</option>
+                        <option value="+55">+55 (Brazil)</option>
+                        <option value="+673">+673 (Brunei)</option>
+                        <option value="+359">+359 (Bulgaria)</option>
+                        <option value="+226">+226 (Burkina Faso)</option>
+                        <option value="+257">+257 (Burundi)</option>
+                        <option value="+855">+855 (Cambodia)</option>
+                        <option value="+237">+237 (Cameroon)</option>
+                        <option value="+1">+1 (Canada)</option>
+                        <option value="+238">+238 (Cape Verde)</option>
+                        <option value="+236">+236 (Central African Republic)</option>
+                        <option value="+235">+235 (Chad)</option>
+                        <option value="+56">+56 (Chile)</option>
+                        <option value="+86">+86 (China)</option>
+                        <option value="+57">+57 (Colombia)</option>
+                        <option value="+269">+269 (Comoros)</option>
+                        <option value="+242">+242 (Congo)</option>
+                        <option value="+243">+243 (Congo (Democratic Republic))</option>
+                        <option value="+506">+506 (Costa Rica)</option>
+                        <option value="+385">+385 (Croatia)</option>
+                        <option value="+53">+53 (Cuba)</option>
+                        <option value="+357">+357 (Cyprus)</option>
+                        <option value="+420">+420 (Czech Republic)</option>
+                        <option value="+45">+45 (Denmark)</option>
+                        <option value="+253">+253 (Djibouti)</option>
+                        <option value="+1-767">+1-767 (Dominica)</option>
+                        <option value="+1-809">+1-809 (Dominican Republic)</option>
+                        <option value="+593">+593 (Ecuador)</option>
+                        <option value="+20">+20 (Egypt)</option>
+                        <option value="+503">+503 (El Salvador)</option>
+                        <option value="+240">+240 (Equatorial Guinea)</option>
+                        <option value="+291">+291 (Eritrea)</option>
+                        <option value="+372">+372 (Estonia)</option>
+                        <option value="+268">+268 (Eswatini)</option>
+                        <option value="+251">+251 (Ethiopia)</option>
+                        <option value="+679">+679 (Fiji)</option>
+                        <option value="+358">+358 (Finland)</option>
+                        <option value="+33">+33 (France)</option>
+                        <option value="+241">+241 (Gabon)</option>
+                        <option value="+220">+220 (Gambia)</option>
+                        <option value="+995">+995 (Georgia)</option>
+                        <option value="+49">+49 (Germany)</option>
+                        <option value="+233">+233 (Ghana)</option>
+                        <option value="+30">+30 (Greece)</option>
+                        <option value="+1-473">+1-473 (Grenada)</option>
+                        <option value="+502">+502 (Guatemala)</option>
+                        <option value="+224">+224 (Guinea)</option>
+                        <option value="+245">+245 (Guinea-Bissau)</option>
+                        <option value="+592">+592 (Guyana)</option>
+                        <option value="+509">+509 (Haiti)</option>
+                        <option value="+504">+504 (Honduras)</option>
+                        <option value="+36">+36 (Hungary)</option>
+                        <option value="+354">+354 (Iceland)</option>
+                        <option value="+91">+91 (India)</option>
+                    </select>                             
+                    <input class="w-full px-4 py-2 border-t border-r border-b rounded-r-lg focus:outline-none focus:ring-2 focus:ring-teal-500" id="phone" placeholder="Enter your phone number" type="tel"/>
+                </div>
+            </div>
+            <div class="mb-4">
+                <label for="passport-country" class="block text-gray-700">Passport with Country of Origin</label>
+<div class="flex">
+    <select id="passport-country" class="block appearance-none w-1/3 bg-white border border-teal-500 text-gray-700 py-3 px-4 pr-8 rounded-l leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
+        <option value="Afghanistan">Afghanistan</option>
+        <option value="Albania">Albania</option>
+        <option value="Algeria">Algeria</option>
+        <option value="Andorra">Andorra</option>
+        <option value="Angola">Angola</option>
+        <option value="Antigua and Barbuda">Antigua and Barbuda</option>
+        <option value="Argentina">Argentina</option>
+        <option value="Armenia">Armenia</option>
+        <option value="Australia">Australia</option>
+        <option value="Austria">Austria</option>
+        <option value="Azerbaijan">Azerbaijan</option>
+        <option value="Bahamas">Bahamas</option>
+        <option value="Bahrain">Bahrain</option>
+        <option value="Bangladesh">Bangladesh</option>
+        <option value="Barbados">Barbados</option>
+        <option value="Belarus">Belarus</option>
+        <option value="Belgium">Belgium</option>
+        <option value="Belize">Belize</option>
+        <option value="Benin">Benin</option>
+        <option value="Bhutan">Bhutan</option>
+        <option value="Bolivia">Bolivia</option>
+        <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+        <option value="Botswana">Botswana</option>
+        <option value="Brazil">Brazil</option>
+        <option value="Brunei">Brunei</option>
+        <option value="Bulgaria">Bulgaria</option>
+        <option value="Burkina Faso">Burkina Faso</option>
+        <option value="Burundi">Burundi</option>
+        <option value="Cambodia">Cambodia</option>
+        <option value="Cameroon">Cameroon</option>
+        <option value="Canada">Canada</option>
+        <option value="Cape Verde">Cape Verde</option>
+        <option value="Central African Republic">Central African Republic</option>
+        <option value="Chad">Chad</option>
+        <option value="Chile">Chile</option>
+        <option value="China">China</option>
+        <option value="Colombia">Colombia</option>
+        <option value="Comoros">Comoros</option>
+        <option value="Congo">Congo</option>
+        <option value="Costa Rica">Costa Rica</option>
+        <option value="Croatia">Croatia</option>
+        <option value="Cuba">Cuba</option>
+        <option value="Cyprus">Cyprus</option>
+        <option value="Czech Republic">Czech Republic</option>
+        <option value="Denmark">Denmark</option>
+        <option value="Djibouti">Djibouti</option>
+        <option value="Dominica">Dominica</option>
+        <option value="Dominican Republic">Dominican Republic</option>
+        <option value="Ecuador">Ecuador</option>
+        <option value="Egypt">Egypt</option>
+        <option value="El Salvador">El Salvador</option>
+        <option value="Equatorial Guinea">Equatorial Guinea</option>
+        <option value="Eritrea">Eritrea</option>
+        <option value="Estonia">Estonia</option>
+        <option value="Eswatini">Eswatini</option>
+        <option value="Ethiopia">Ethiopia</option>
+        <option value="Fiji">Fiji</option>
+        <option value="Finland">Finland</option>
+        <option value="France">France</option>
+        <option value="Gabon">Gabon</option>
+        <option value="Gambia">Gambia</option>
+        <option value="Georgia">Georgia</option>
+        <option value="Germany">Germany</option>
+        <option value="Ghana">Ghana</option>
+        <option value="Greece">Greece</option>
+        <option value="Grenada">Grenada</option>
+        <option value="Guatemala">Guatemala</option>
+        <option value="Guinea">Guinea</option>
+        <option value="Guinea-Bissau">Guinea-Bissau</option>
+        <option value="Guyana">Guyana</option>
+        <option value="Haiti">Haiti</option>
+        <option value="Honduras">Honduras</option>
+        <option value="Hungary">Hungary</option>
+        <option value="Iceland">Iceland</option>
+        <option value="India">India</option>
+        <option value="Indonesia">Indonesia</option>
+        <option value="Iran">Iran</option>
+        <option value="Iraq">Iraq</option>
+        <option value="Ireland">Ireland</option>
+        <option value="Israel">Israel</option>
+        <option value="Italy">Italy</option>
+        <option value="Jamaica">Jamaica</option>
+        <option value="Japan">Japan</option>
+        <option value="Jordan">Jordan</option>
+        <option value="Kazakhstan">Kazakhstan</option>
+    </select>
+    <input type="text" id="passport-number" class="w-2/3 px-4 py-2 border rounded-r-lg" placeholder="Enter your passport number">
+</div>
+
+            <div class="bg-[#28282B] p-8 rounded-lg shadow-md w-full max-w-2xl">
+                <h2 class="text-2xl font-bold mb-2 text-white">
+                 2. Company Name
+                </h2>
+                <p class="mb-6 text-white">
+                 Enter two name options for your company.
+                </p>
+                <div class="mb-4">
+                 <label class="block text-gray-400 mb-2" for="first-name-option">
+                  First Name Option
+                 </label>
+                 <input class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500" id="first-name-option" placeholder="Enter a name for the company" type="text"/>
+                </div>
+                <div>
+                 <label class="block text-gray-400 mb-2" for="second-name-option">
+                  Second Name Option
+                 </label>
+                 <input class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500" id="second-name-option" placeholder="Enter a name for the company" type="text"/>
+                </div>
+               </div>
+               <div class="bg-[#28282B] p-8 rounded-lg shadow-lg w-full max-w-2xl">
+                <h2 class="text-2xl font-bold text-white mb-4">3. Company Location</h2>
+                <p class="text-white mb-6">Select the location of the company.</p>
+                <div class="space-y-4">
+                    <label class="block bg-blue-100 p-4 rounded-lg cursor-pointer">
+                        <input type="radio" name="location" class="mr-2" checked disabled>
+                        <span class="font-semibold">New Mexico $397</span>
+                    </label>
+                </div>
+        </form>
+    </div>
+    <div class="bg-[#28282B] p-8 rounded-lg shadow-md w-full max-w-2xl">
+        <h2 class="text-2xl font-bold mb-2 text-white">4. Industry</h2>
+        <p class="text-gray-400 mb-4">Industry or sector of the company</p>
+        <div class="relative">
+            <select id="industry-select" class="block appearance-none w-full bg-white border border-teal-500 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" onchange="toggleOtherInput()">
+                <option>Wholesale Agent</option>
+                <option>Rental and Leasing</option>
+                <option>Real Estate</option>
+                <option>Construction</option>
+                <option>Manufacturing</option>
+                <option>Finance and Insurance</option>
+                <option>Health and Social Care</option>
+                <option>Accommodation and Food Service</option>
+                <option>Transportation and Storage</option>
+                <option>Wholesale Trade</option>
+                <option>Retail Trade</option>
+                <option value="other">Other</option>
+            </select>
+            
+            <div id="other-industry" class="mt-4" style="display: none;">
+                <label for="other-industry-input" class="block text-gray-700">Specify the company industry or sector</label>
+                <input type="text" id="other-industry-input" class="w-full px-4 py-2 border rounded-lg" placeholder="Enter the company industry or sector">
+            </div>
+            
+            <script>
+            function toggleOtherInput() {
+                var select = document.getElementById("industry-select");
+                var otherInput = document.getElementById("other-industry");
+                if (select.value === "other") {
+                    otherInput.style.display = "block";
+                } else {
+                    otherInput.style.display = "none";
+                }
+            }
+            </script>
+            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/></svg>
+            </div>
+        </div>
+    </div>
+    <div class="flex justify-end">
+        <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">Next</button>
+    </div>
+</body>
+</html>
