@@ -55,26 +55,26 @@
       <label class="block text-gray-400 mb-2" for="first-names">
        First Names
       </label>
-      <input class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500" id="first-names" placeholder="Enter your first names" type="text"/>
+      <input class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500" id="first-names" placeholder="Enter your first names" type="text" required/>
      </div>
      <div class="mb-4">
       <label class="block text-gray-400 mb-2" for="last-names">
        Last Names
       </label>
-      <input class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500" id="last-names" placeholder="Enter your last names" type="text"/>
+      <input class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500" id="last-names" placeholder="Enter your last names" type="text" required/>
      </div>
      <div class="mb-4">
       <label class="block text-gray-400 mb-2" for="email">
        Email Address
       </label>
-      <input class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500" id="email" placeholder="Enter your email address" type="email"/>
+      <input class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500" id="email" placeholder="Enter your email address" type="email" required/>
      </div>
      <div class="mb-4">
       <label class="block text-gray-400 mb-2" for="phone">
        Phone Number
       </label>
       <div class="flex">
-       <select class="flex items-center px-4 py-2 border rounded-l-lg bg-gray-100 focus:outline-none focus:ring-2 focus:ring-teal-500" id="country-code">
+       <select id="ddd" class="flex items-center px-4 py-2 border rounded-l-lg bg-gray-100 focus:outline-none focus:ring-2 focus:ring-teal-500" id="country-code">
                         <option value="+93">+93 (Afghanistan)</option>
                         <option value="+355">+355 (Albania)</option>
                         <option value="+213">+213 (Algeria)</option>
@@ -152,13 +152,13 @@
                         <option value="+354">+354 (Iceland)</option>
                         <option value="+91">+91 (India)</option>
                     </select>                             
-                    <input class="w-full px-4 py-2 border-t border-r border-b rounded-r-lg focus:outline-none focus:ring-2 focus:ring-teal-500" id="phone" placeholder="Enter your phone number" type="tel"/>
+                    <input class="w-full px-4 py-2 border-t border-r border-b rounded-r-lg focus:outline-none focus:ring-2 focus:ring-teal-500" id="phone" placeholder="Enter your phone number" type="tel" required/>
                 </div>
             </div>
             <div class="mb-4">
-                <label for="passport-country" class="block text-gray-700">Passport with Country of Origin</label>
-<div class="flex">
-    <select id="passport-country" class="block appearance-none w-1/3 bg-white border border-teal-500 text-gray-700 py-3 px-4 pr-8 rounded-l leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
+                <label for="passport-country" class="block text-gray-400">Passport with Country of Origin</label>
+<div class="flex items-center">
+    <select id="passport-country" class="w-full sm:w-1/3 px-4 py-2 border border-gray-300 rounded-lg bg-white text-gray-900 focus:outline-none focus:ring-2 focus:ring-teal-500 text-center" required>        
         <option value="Afghanistan">Afghanistan</option>
         <option value="Albania">Albania</option>
         <option value="Algeria">Algeria</option>
@@ -245,7 +245,6 @@
         <option value="Jordan">Jordan</option>
         <option value="Kazakhstan">Kazakhstan</option>
     </select>
-    <input type="text" id="passport-number" class="w-2/3 px-4 py-2 border rounded-r-lg" placeholder="Enter your passport number">
 </div>
 
             <div class="bg-[#28282B] p-8 rounded-lg shadow-md w-full max-w-2xl">
@@ -259,13 +258,13 @@
                  <label class="block text-gray-400 mb-2" for="first-name-option">
                   First Name Option
                  </label>
-                 <input class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500" id="first-name-option" placeholder="Enter a name for the company" type="text"/>
+                 <input class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500" id="first-name-option" placeholder="Enter a name for the company" type="text" required/>
                 </div>
                 <div>
                  <label class="block text-gray-400 mb-2" for="second-name-option">
                   Second Name Option
                  </label>
-                 <input class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500" id="second-name-option" placeholder="Enter a name for the company" type="text"/>
+                 <input class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500" id="second-name-option" placeholder="Enter a name for the company" type="text" required/>
                 </div>
                </div>
                <div class="bg-[#28282B] p-8 rounded-lg shadow-lg w-full max-w-2xl">
@@ -283,7 +282,7 @@
         <h2 class="text-2xl font-bold mb-2 text-white">4. Industry</h2>
         <p class="text-gray-400 mb-4">Industry or sector of the company</p>
         <div class="relative">
-            <select id="industry-select" class="w-full px-4 py-2 border border-gray-300 rounded-lg bg-white text-gray-900 focus:outline-none focus:ring-2 focus:ring-teal-500 appearance-none" onchange="toggleOtherInput()">
+            <select id="industry-select" class="w-full px-4 py-2 border border-gray-300 rounded-lg bg-white text-gray-900 focus:outline-none focus:ring-2 focus:ring-teal-500 appearance-none" onchange="toggleOtherInput()" required>
                 <option value="" disabled selected>Select an industry</option>
                 <option>Wholesale Agent</option>
                 <option>Rental and Leasing</option>
@@ -326,30 +325,39 @@
 
     <script>
         document.getElementById("formulario").addEventListener("submit", async function(event) {
-            event.preventDefault();
-    
-            const firstNames = document.getElementById("first-names").value;
-            const lastNames = document.getElementById("last-names").value;
-            const email = document.getElementById("email").value; 
-            const phone = document.getElementById("phone").value;
-            const passportCountry = document.getElementById("passport-country").value;
-            const firstNameOption = document.getElementById("first-name-option").value;
-            const secondNameOption = document.getElementById("second-name-option").value;
-            const industry = document.getElementById("industry-select").value;
-            const other = document.getElementById("other-industry-input") ? document.getElementById("other-industry-input").value : "";
-    
-            const scriptURL = "https://script.google.com/macros/s/AKfycbx3uXzwPzGiZVAN_qYJsUmR1-o61sMub7_y2AGituaTW-RseRZcvwbsZsv9D_AwRnvs/exec";
+        event.preventDefault();
+
+        // Captura os valores dos campos
+        const firstNames = document.getElementById("first-names").value.trim();
+        const lastNames = document.getElementById("last-names").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const ddd = document.getElementById("ddd").value.trim();
+        const phone = document.getElementById("phone").value.trim();
+        const passportCountry = document.getElementById("passport-country").value.trim();
+        const firstNameOption = document.getElementById("first-name-option").value.trim();
+        const secondNameOption = document.getElementById("second-name-option").value.trim();
+        const industry = document.getElementById("industry-select").value.trim();
+        const otherIndustry = document.getElementById("other-industry-input") ? document.getElementById("other-industry-input").value.trim() : "";
+
+        // Verifica se algum campo está vazio
+        if (!firstNames || !lastNames || !email || !phone || !passportCountry || !industry || (industry === "other" && !otherIndustry)) {
+            alert("Por favor, preencha todos os campos obrigatórios antes de continuar.");
+            return;
+        }
+
+            const scriptURL = "https://script.google.com/macros/s/AKfycbwzj_9YjrQHmIvxHf9KNZasg1dl0eQwuVNLZjgjmuiIXPJC8PbKXAzN6gLLlMH1ZVGG/exec";
     
             const formData = new URLSearchParams();
             formData.append("firstNames", firstNames);
             formData.append("lastNames", lastNames);
             formData.append("email", email);
+            formData.append("ddd", ddd);
             formData.append("phone", phone);
             formData.append("passportCountry", passportCountry);
             formData.append("firstNameOption", firstNameOption);
             formData.append("secondNameOption", secondNameOption);
             formData.append("industry", industry);
-            formData.append("other", other);
+            formData.append("otherIndustry", otherIndustry);
     
             try {
                 const response = await fetch(scriptURL, {
@@ -358,14 +366,18 @@
                 });
     
                 const result = await response.text();
-                alert("Formulário enviado com sucesso!\nResposta do servidor: " + result);
+                alert("Formulário enviado com sucesso!\nEncaminhando para a página de pagamento.");
             } catch (error) {
                 alert("Erro ao enviar formulário.");
                 console.error("Erro:", error);
             }
         });
     </script>
-    
-    
+    <!-- Footer -->
+   <footer class="bg-[#28282B] py-6 fade-in">
+    <div class="container mx-auto px-4 text-center">
+      <p class="text-gray-400">© 2024 Vulturfly. All rights reserved.</p>
+    </div>
+  </footer>
 </body>
 </html>
