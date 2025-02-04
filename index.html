@@ -219,33 +219,33 @@
      </div>
      <script>
       function animateValue(id, start, end, duration) {
-       const obj = document.getElementById(id);
-       const range = end - start;
-       const minTimer = 50;
-       const stepTime = Math.abs(Math.floor(duration / range));
-       const startTime = new Date().getTime();
-       const endTime = startTime + duration;
-       let timer;
-   
-       function run() {
-        const now = new Date().getTime();
-        const remaining = Math.max((endTime - now) / duration, 0);
-        const value = Math.round(end - (remaining * range));
-        obj.innerHTML = `+${value}`;
-        if (value == end) {
-         clearInterval(timer);
-        }
-       }
-   
-       timer = setInterval(run, stepTime);
-       run();
+          const obj = document.getElementById(id);
+          const range = end - start;
+          const increment = range / (duration / 50); // Define um incremento menor
+          let current = start;
+          const startTime = new Date().getTime();
+          const endTime = startTime + duration;
+  
+          function run() {
+              const now = new Date().getTime();
+              const remaining = Math.max((endTime - now) / duration, 0);
+              current = Math.round(end - (remaining * range));
+  
+              obj.innerHTML = `+${current}`;
+  
+              if (current < end) {
+                  setTimeout(run, 50); // Define uma atualização a cada 50ms
+              }
+          }
+  
+          run();
       }
-   
-      document.addEventListener("DOMContentLoaded", function() {
-       animateValue("companies-created", 0, 10400, 2000);
-       animateValue("countries", 0, 47, 2000);
+  
+      document.addEventListener("DOMContentLoaded", function () {
+          animateValue("companies-created", 0, 10400, 5000); // Agora sobe em 5 segundos
+          animateValue("countries", 0, 47, 5000); // Também sobe em 5 segundos
       });
-     </script>
+  </script>
   </section>
   <!-- Hero Section 2-->
   <section class="bg-white py-20 pt-24" id="home2">
