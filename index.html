@@ -11,6 +11,7 @@
   </script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <style>
    body {
       font-family: 'Roboto', sans-serif;
@@ -36,6 +37,34 @@
       opacity: 1;
       transform: translateY(0);
     }
+    
+    .logo-slider {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    width: 100%;
+    background: #f9f9f9;
+    padding: 10px 0;
+}
+
+.logo-slider__track {
+    display: flex;
+    width: 100%; /* O dobro do conteúdo para loop contínuo */
+    animation: scroll 20s linear infinite;
+}
+
+.logo-slider__logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex: 0 0 auto;
+    width: 100%;
+}
+
+.logo-slider__logo img {
+  height: 50px;
+    margin: 0 5px;
+}
       
     @keyframes fadeIn {
       from {
@@ -73,6 +102,14 @@
         transform: scale(1.1);
       }
     }
+    @keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
   </style>
   <script>
    document.addEventListener('DOMContentLoaded', function() {
@@ -330,6 +367,28 @@
     </div>
    </div>
   </section>
+  <!-- Slider -->
+  <div class="logo-slider">
+    <div class="logo-slider__track">
+        <div class="logo-slider__logo">
+            <img src="./images/relay.png" alt="Logo 1">
+            <img src="./images/banpay.png" alt="Logo 2">
+            <img src="./images/Mercury.png" alt="Logo 3">
+            <img src="./images/stripe.png" alt="Logo 4">
+            <img src="./images/wise.png" alt="Logo 5">
+        </div>
+        <!-- Duplicação para efeito de loop contínuo -->
+        <div class="logo-slider__logo">
+          <img src="./images/relay.png" alt="Logo 1">
+          <img src="./images/banpay.png" alt="Logo 2">
+          <img src="./images/Mercury.png" alt="Logo 3">
+          <img src="./images/stripe.png" alt="Logo 4">
+          <img src="./images/wise.png" alt="Logo 5">
+      </div>
+    </div>
+</div>
+
+
   <!-- Features Section -->
   <section class="bg-white py-20 fade-in rounded-lg p-8">
     <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
