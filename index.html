@@ -25,8 +25,18 @@
       animation: slideDown 1s ease-in-out;
     }
     .pulse {
-      animation: pulse 1s infinite;
+      animation: pulse 2s infinite;
     }
+    .step {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+    .step.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+      
     @keyframes fadeIn {
       from {
         opacity: 0;
@@ -112,8 +122,96 @@
     </ul>
    </div>
   </nav>
+
   <!-- Hero Section -->
   <section class="bg-white py-20 pt-24" id="home">
+    <div class="container mx-auto px-4 py-20 flex flex-col lg:flex-row items-center justify-between">
+      <div class="lg:w-1/2 mb-10 lg:mb-0">
+       <h1 class="text-4xl lg:text-5xl font-bold mb-4">
+        Create your company in the USA
+       </h1>
+       <p class="text-lg mb-6">
+        Get paid in dollars. Manage your US business and corporate bank account from anywhere in the world.
+       </p>
+      </div>
+      <div class="lg:w-1/2 relative">
+       <div class="bg-gray-100 rounded-lg p-6 shadow-lg relative z-10">
+        <div class="flex justify-between items-center mb-4">
+         <span class="text-sm text-gray-600">
+          VULTURFLY
+         </span>
+        </div>
+        <div class="flex items-center mb-4">
+         <div class="bg-green-500 text-white rounded-full w-12 h-12 flex items-center justify-center text-lg">
+          100%
+         </div>
+         <div class="ml-4 flex-1">
+          <div class="h-2 bg-gray-300 rounded-full mb-2">
+          </div>
+          <div class="h-2 bg-gray-300 rounded-full">
+          </div>
+         </div>
+        </div>
+        <div class="bg-gray-300 rounded-lg p-4">
+         <div class="relative">
+          <img alt="Graph showing company growth over months" class="w-full h-auto object-contain rounded-lg" src="./images/grafico.png"/>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="container mx-auto px-4 py-10">
+      <div class="bg-gray-300 rounded-lg p-4 shadow-lg flex items-center justify-between w-full lg:w-3/4 mx-auto">
+       <div class="text-center">
+        <p class="text-2xl font-bold text-gray-900" id="companies-created">
+         +0
+        </p>
+        <p class="text-sm text-gray-600">
+         Companies created
+        </p>
+       </div>
+       <div class="text-center">
+        <p class="text-2xl font-bold text-gray-900" id="countries">
+         +0
+        </p>
+        <p class="text-sm text-gray-600">
+         Countries
+        </p>
+       </div>
+      </div>
+     </div>
+     <script>
+      function animateValue(id, start, end, duration) {
+       const obj = document.getElementById(id);
+       const range = end - start;
+       const minTimer = 50;
+       const stepTime = Math.abs(Math.floor(duration / range));
+       const startTime = new Date().getTime();
+       const endTime = startTime + duration;
+       let timer;
+   
+       function run() {
+        const now = new Date().getTime();
+        const remaining = Math.max((endTime - now) / duration, 0);
+        const value = Math.round(end - (remaining * range));
+        obj.innerHTML = `+${value}`;
+        if (value == end) {
+         clearInterval(timer);
+        }
+       }
+   
+       timer = setInterval(run, stepTime);
+       run();
+      }
+   
+      document.addEventListener("DOMContentLoaded", function() {
+       animateValue("companies-created", 0, 10400, 2000);
+       animateValue("countries", 0, 47, 2000);
+      });
+     </script>
+  </section>
+  <!-- Hero Section 2-->
+  <section class="bg-white py-20 pt-24" id="home2">
    <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
     <div class="md:w-1/2 slide-up">
      <h1 class="text-4xl md:text-5xl font-bold text-gray-800 leading-tight">
@@ -232,6 +330,49 @@
     </div>
    </div>
   </section>
+  <!-- Features Section -->
+  <section class="bg-white py-20 fade-in rounded-lg p-8">
+    <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-extrabold text-gray-900 text-center mb-8">
+       Advantages of Choosing Us
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+       <div class="bg-white p-6 rounded-lg shadow-md">
+        <div class="flex items-center justify-center mb-4">
+         <img alt="Icon representing Accounting AI" class="h-16 w-16" src="./images/Accounting.png"/>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-900 text-center">
+         Accounting AI
+        </h3>
+        <p class="mt-2 text-gray-600 text-center">
+         Automate accounting with artificial intelligence to save time and minimize errors.
+        </p>
+       </div>
+       <div class="bg-white p-6 rounded-lg shadow-md">
+        <div class="flex items-center justify-center mb-4">
+         <img alt="Icon representing Virtual Account and Crypto OTC Wallet" class="h-16 w-16" src="./images/bitcoin.png"/>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-900 text-center">
+         Virtual Account and Crypto OTC Wallet
+        </h3>
+        <p class="mt-2 text-gray-600 text-center">
+         A virtual account to securely and easily manage fiat and cryptocurrencies.
+        </p>
+       </div>
+       <div class="bg-white p-6 rounded-lg shadow-md">
+        <div class="flex items-center justify-center mb-4">
+          <img alt="Icon representing Stripe Connect" class="h-16 w-auto mx-auto object-contain" src="./images/stripe.png" />
+        </div>
+        <h3 class="text-xl font-semibold text-gray-900 text-center">
+         Stripe Connect
+        </h3>
+        <p class="mt-2 text-gray-600 text-center">
+         Integrate payments with Stripe and optimize your financial ecosystem.
+        </p>
+       </div>
+      </div>
+     </div>
+  </section>
   <!-- Pricing Section -->
   <section class="bg-white py-20 fade-in" id="pricing">
     <div class="container mx-auto py-12">
@@ -270,6 +411,77 @@
           </div>
       </div>
   </div>
+  </section>
+  <!-- Processing Section -->
+  <section class="bg-white py-20 fade-in flex items-center justify-center min-h-screen" id="process">
+    <div class="text-center">
+      <h1 class="text-3xl font-semibold mb-8">Create your LLC in the USA in 5 simple steps</h1>
+      <div class="relative">
+          <div class="absolute left-1/2 transform -translate-x-1/2 h-full border-l-2 border-dotted border-yellow-500" style="top: 2.5rem; bottom: 4rem;"></div>
+          <div class="relative mb-16 flex justify-start step">
+              <div class="flex items-center justify-center mb-4">
+                  <div class="w-10 h-10 bg-yellow-500 text-white rounded-full flex items-center justify-center text-lg font-bold">1</div>
+              </div>
+              <div class="bg-white rounded-lg shadow-lg p-6 max-w-md ml-4">
+                  <h2 class="text-lg font-semibold mb-2">Complete your application</h2>
+                  <p class="text-gray-600">Fill out our form with your company information and preferences. Everything is 100% online and simple.</p>
+              </div>
+          </div>
+          <div class="relative mb-16 flex justify-end step">
+              <div class="bg-white rounded-lg shadow-lg p-6 max-w-md mr-4">
+                  <h2 class="text-lg font-semibold mb-2">We process your LLC</h2>
+                  <p class="text-gray-600">We handle the paperwork and manage the creation of your LLC quickly and efficiently.</p>
+              </div>
+              <div class="flex items-center justify-center mb-4">
+                  <div class="w-10 h-10 bg-yellow-500 text-white rounded-full flex items-center justify-center text-lg font-bold">2</div>
+              </div>
+          </div>
+          <div class="relative mb-16 flex justify-start step">
+              <div class="flex items-center justify-center mb-4">
+                  <div class="w-10 h-10 bg-yellow-500 text-white rounded-full flex items-center justify-center text-lg font-bold">3</div>
+              </div>
+              <div class="bg-white rounded-lg shadow-lg p-6 max-w-md ml-4">
+                  <h2 class="text-lg font-semibold mb-2">Set up your bank account</h2>
+                  <p class="text-gray-600">Open your business account with us and start operating from anywhere in the world.</p>
+              </div>
+          </div>
+          <div class="relative mb-16 flex justify-end step">
+              <div class="bg-white rounded-lg shadow-lg p-6 max-w-md mr-4">
+                  <h2 class="text-lg font-semibold mb-2">Complete the onboarding on Stripe</h2>
+                  <p class="text-gray-600">Start receiving payments in dollars through payment links, invoices, and subscriptions without complications.</p>
+              </div>
+              <div class="flex items-center justify-center mb-4">
+                  <div class="w-10 h-10 bg-yellow-500 text-white rounded-full flex items-center justify-center text-lg font-bold">4</div>
+              </div>
+          </div>
+          <div class="relative mb-16 flex justify-start step">
+              <div class="flex items-center justify-center mb-4">
+                  <div class="w-10 h-10 bg-yellow-500 text-white rounded-full flex items-center justify-center text-lg font-bold">5</div>
+              </div>
+              <div class="bg-white rounded-lg shadow-lg p-6 max-w-md ml-4">
+                  <h2 class="text-lg font-semibold mb-2">Open your virtual account and crypto wallet</h2>
+                  <p class="text-gray-600">Receive and make payments in dollars, euros, and cryptocurrencies with total freedom and security.</p>
+              </div>
+          </div>
+          <div class="flex justify-center mt-8 step pulse">
+              <a class="scroll-to" href="#pricing">
+                  <button class="bg-yellow-500 text-white px-6 py-3 rounded-full text-lg font-semibold">GET STARTED</button>
+              </a>
+          </div>
+      </div>
+  </div>
+  <script>
+      document.addEventListener('DOMContentLoaded', () => {
+          const steps = document.querySelectorAll('.step');
+          let delay = 0;
+          steps.forEach(step => {
+              setTimeout(() => {
+                  step.classList.add('visible');
+              }, delay);
+              delay += 500;
+          });
+      });
+  </script>
   </section>
   <!-- Contact Section -->
   <section class="bg-white py-20 fade-in" id="contact">
