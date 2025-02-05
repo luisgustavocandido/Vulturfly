@@ -49,6 +49,8 @@
 
 .logo-slider__track {
     display: flex;
+    align-items: center;
+    gap: 30px;
     width: 100%; /* O dobro do conteúdo para loop contínuo */
     animation: scroll 20s linear infinite;
 }
@@ -64,6 +66,18 @@
 .logo-slider__logo img {
   height: 50px;
     margin: 0 5px;
+}
+/* Ajustes específicos para mobile */
+@media (max-width: 768px) {
+    .logo-slider__track {
+        width: 250%; /* Aumenta o espaço para evitar sobreposição */
+        gap: 20px;
+    }
+
+    .logo-slider__logo img {
+        height: 35px; /* Reduz um pouco o tamanho dos logos */
+        max-width: 120px;
+    }
 }
       
     @keyframes fadeIn {
@@ -110,6 +124,7 @@
         transform: translateX(-50%);
     }
 }
+
   </style>
   <script>
    document.addEventListener('DOMContentLoaded', function() {
